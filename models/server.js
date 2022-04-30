@@ -13,7 +13,6 @@ class Server {
     this.io = new socket.Server(this.httpServer, {
       /* options */
     });
-    this.sockets = new Sockets(this.io);
   }
   middlewares() {
     this.app.use(express.static(path.resolve(__dirname, "../public")));
